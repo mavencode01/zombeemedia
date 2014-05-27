@@ -1,0 +1,26 @@
+<enunciate xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="http://enunciate.codehaus.org/schemas/enunciate-1.21.xsd">
+
+	<api-import pattern="com.snap2list.**" />
+	<services>
+		<rest defaultRestSubcontext="/" />
+		<!-- <soap defaultSoapSubcontext="/" /> -->
+	</services>
+
+	<!-- <webapp mergeWebXML="web.xml" /> -->
+
+	<modules>
+		<docs splashPackage="enunciate.xml.api" title="BEACON API"
+			copyright="Snap2list" indexPageName="index.html" />
+		<basic-app disabled="false" />
+		<c disabled="false" />
+		<csharp disabled="false" />
+		<java-client disabled="false" />
+		<jaxws-client disabled="false" />
+		<jaxws-ri disabled="false" />
+		<jaxws-support disabled="false" />
+		<jersey disabled="false" />
+		<obj-c disabled="false" />
+		<xml disabled="false" />
+	</modules>
+</enunciate>
