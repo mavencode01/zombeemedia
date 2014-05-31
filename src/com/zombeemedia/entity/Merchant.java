@@ -1,8 +1,12 @@
 package com.zombeemedia.entity;
 
+import org.springframework.data.mongodb.core.mapping.Document;
+
+@Document(collection = "Merchant")
 public class Merchant extends BaseEntity {
 
 	private String name;
+	private String tags;
 	private Address address;
 	private String phone;
 	private String website;
@@ -13,6 +17,14 @@ public class Merchant extends BaseEntity {
 
 	public void setName(String name) {
 		this.name = name;
+	}
+
+	public String getTags() {
+		return tags;
+	}
+
+	public void setTags(String tags) {
+		this.tags = tags;
 	}
 
 	public Address getAddress() {
@@ -38,5 +50,4 @@ public class Merchant extends BaseEntity {
 	public void setWebsite(String website) {
 		this.website = website;
 	}
-
 }

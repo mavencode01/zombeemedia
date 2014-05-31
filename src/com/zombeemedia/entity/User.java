@@ -1,5 +1,7 @@
 package com.zombeemedia.entity;
 
+import org.codehaus.enunciate.json.JsonIgnore;
+import org.codehaus.enunciate.json.JsonProperty;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 @Document(collection = "User")
@@ -7,6 +9,8 @@ public class User extends BaseEntity {
 
 	private String firstname;
 	private String lastname;
+	private String age;
+	@JsonIgnore
 	private String password;
 	private Gender gender;
 	private String email;
@@ -28,10 +32,20 @@ public class User extends BaseEntity {
 		this.lastname = lastname;
 	}
 
+	public String getAge() {
+		return age;
+	}
+
+	public void setAge(String age) {
+		this.age = age;
+	}
+
+	@JsonIgnore
 	public String getPassword() {
 		return password;
 	}
 
+	@JsonProperty
 	public void setPassword(String password) {
 		this.password = password;
 	}

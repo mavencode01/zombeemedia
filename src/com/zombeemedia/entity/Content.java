@@ -1,11 +1,16 @@
 package com.zombeemedia.entity;
 
-import com.sun.mail.imap.Utility.Condition;
+import org.springframework.data.mongodb.core.mapping.Document;
 
+@Document(collection="Content")
 public class Content extends BaseEntity {
 	private String contentURL;
+	private String description;
+	private String counter;
+	private String email;
+	private String website;
+	private String telephone;
 	private boolean active;
-	private Condition condition;
 	private String merchantId;
 	private String zombeeId;
 
@@ -25,14 +30,46 @@ public class Content extends BaseEntity {
 		this.active = active;
 	}
 
-	public Condition getCondition() {
-		return condition;
+	public String getDescription() {
+		return description;
 	}
 
-	public void setCondition(Condition condition) {
-		this.condition = condition;
+	public void setDescription(String description) {
+		this.description = description;
 	}
 
+	public String getCounter() {
+		return counter;
+	}
+
+	public void setCounter(String counter) {
+		this.counter = counter;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public String getWebsite() {
+		return website;
+	}
+
+	public void setWebsite(String website) {
+		this.website = website;
+	}
+
+	public String getTelephone() {
+		return telephone;
+	}
+
+	public void setTelephone(String telephone) {
+		this.telephone = telephone;
+	}
+	
 	public String getMerchantId() {
 		return merchantId;
 	}

@@ -12,10 +12,12 @@ public class BaseEntity {
 
 	@Id
 	protected String id;
-	@JsonSerialize(using=JsonDateSerializer.class)
+	@JsonSerialize(using = JsonDateSerializer.class)
 	protected DateTime creationTime;
-	@JsonSerialize(using=JsonDateSerializer.class)
+	@JsonSerialize(using = JsonDateSerializer.class)
 	protected DateTime lastUpdate;
+
+	private boolean markDelete;
 
 	public String getId() {
 		return id;
@@ -39,6 +41,14 @@ public class BaseEntity {
 
 	public void setLastUpdate(DateTime lastUpdate) {
 		this.lastUpdate = lastUpdate;
+	}
+
+	public boolean isMarkDelete() {
+		return markDelete;
+	}
+
+	public void setMarkDelete(boolean markDelete) {
+		this.markDelete = markDelete;
 	}
 
 }

@@ -21,7 +21,7 @@ public class AppExceptionMapper implements ExceptionMapper<Exception> {
 	@Override
 	public Response toResponse(Exception fEx) {
 		LOGGER.severe(fEx.getMessage());
-		return Response.status(Response.Status.BAD_REQUEST).entity(new ErrorResponseConverter("Technical Error: " + fEx.getMessage(), Constants.TECHINICAL_EROR)).type(headers.getMediaType()).build();
+		return Response.status(Response.Status.BAD_REQUEST).entity(new ErrorResponseConverter("Technical Error: " + fEx.getMessage(), Constants.TECHINICAL_ERORR)).type(headers.getMediaType()).build();
 	}
 
 }

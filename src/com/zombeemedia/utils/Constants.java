@@ -19,11 +19,21 @@ public class Constants {
 	public static final int INVALID_LOGIN_CREDENTIALS = 1002;
 	public static final int NO_SUCH_USER = 1003;
 	public static final int INVALID_PASSWORD = 1004;
+	public static final int INVALID_REQUEST = 10005;
 	
-	public static final int INVALID_VENUE = 4000;
+	
+	public static final int TECHINICAL_ERORR = 5000;
+	
+	public static final int INVALID_CONTENT = 6000;
+	public static final int CONTENTS_INVALID_ZOMBIE = 6001;	
+	public static final int CONTENTS_INVALID_MERCHANT = 6002;
+	
+	public static final int NO_SUCH_MERCHANT = 7000;
 	
 	
-	public static final int TECHINICAL_EROR = 5000;
-	public static final int NO_SUCH_VENUE = 5001;
+	public static final int INVALID_STATS = 8000;
+	
+	public static final int INVALID_ZOMBEE = 9000;
+	public static final int ZOMBEE_NOT_FOUND = 9001;	
 		
 }

@@ -1,5 +1,8 @@
 package com.zombeemedia.entity;
 
+import org.springframework.data.mongodb.core.mapping.Document;
+
+@Document(collection = "UserStats")
 public class UserStats extends BaseEntity {
 
 	private Address location;
@@ -7,6 +10,7 @@ public class UserStats extends BaseEntity {
 	private Content content;
 	private Merchant merchant;
 	private Zombee zombee;
+	private UserRequest request;
 	private String device;
 	private boolean redemmed;
 
@@ -48,6 +52,14 @@ public class UserStats extends BaseEntity {
 
 	public void setZombee(Zombee zombee) {
 		this.zombee = zombee;
+	}
+
+	public UserRequest getRequest() {
+		return request;
+	}
+
+	public void setRequest(UserRequest request) {
+		this.request = request;
 	}
 
 	public String getDevice() {

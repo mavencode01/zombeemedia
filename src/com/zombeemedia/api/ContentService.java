@@ -1,7 +1,6 @@
 package com.zombeemedia.api;
 
 import com.zombeemedia.entity.AppResponse;
-import com.zombeemedia.entity.ConditionType;
 import com.zombeemedia.entity.Content;
 
 public class ContentService extends AppService {
@@ -14,7 +13,7 @@ public class ContentService extends AppService {
 		return null;
 	}
 
-	public AppResponse getZombieContent(String zombeeId, ConditionType type) {
+	public AppResponse getZombieContent(String zombeeId) {
 		return null;
 	}
 }

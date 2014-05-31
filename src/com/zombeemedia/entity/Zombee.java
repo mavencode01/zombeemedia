@@ -1,17 +1,21 @@
 package com.zombeemedia.entity;
 
+import org.springframework.data.mongodb.core.mapping.Document;
+
+import com.zombeemedia.entities.conditions.Condition;
+
+@Document(collection = "Zombee")
 public class Zombee extends BaseEntity {
-	private String contentId;
+
 	private String beaconId;
+	private int maxZombeedCountAllowed;
 	private String majorIdentifer;
 	private String minorIdentifer;
+	private ZombeeType type;
+	private Condition condition;
 
-	public String getContentId() {
-		return contentId;
-	}
-
-	public void setContentId(String contentId) {
-		this.contentId = contentId;
+	public Zombee() {
+		setMaxZombeedCountAllowed(1);
 	}
 
 	public String getBeaconId() {
@@ -20,6 +24,14 @@ public class Zombee extends BaseEntity {
 
 	public void setBeaconId(String beaconId) {
 		this.beaconId = beaconId;
+	}
+
+	public int getMaxZombeedCountAllowed() {
+		return maxZombeedCountAllowed;
+	}
+
+	public void setMaxZombeedCountAllowed(int maxZombeedCountAllowed) {
+		this.maxZombeedCountAllowed = maxZombeedCountAllowed;
 	}
 
 	public String getMajorIdentifer() {
@@ -36,6 +48,22 @@ public class Zombee extends BaseEntity {
 
 	public void setMinorIdentifer(String minorIdentifer) {
 		this.minorIdentifer = minorIdentifer;
+	}
+
+	public ZombeeType getType() {
+		return type;
+	}
+
+	public void setType(ZombeeType type) {
+		this.type = type;
+	}
+
+	public Condition getCondition() {
+		return condition;
+	}
+
+	public void setCondition(Condition condition) {
+		this.condition = condition;
 	}
 
 }
